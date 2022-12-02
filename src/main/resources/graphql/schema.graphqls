@@ -1,0 +1,22 @@
+type Car{
+	id:ID!
+	name: String!
+	photo: String!
+	price: String!	
+}
+
+input CarInput{
+	name: String!
+	photo: String!
+	price: String!	
+}
+
+type Query{
+	cars: [Car]!
+	carById(id:ID) : Car
+	carByName(name:String): Car
+}
+
+type Mutation{
+	addCar(input: CarInput): Car
+}
